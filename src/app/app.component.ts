@@ -20,7 +20,7 @@ export class AppComponent {
   }
 
   initLine(): void {
-    liff.init({liffId: '2000383540-BegEJ63g'}, () => {
+    liff.init({liffId: '2000383540-BegEJ63g', withLoginOnExternalBrowser: true}, () => {
       if (liff.isLoggedIn()) {
         this.runApp();
       }
