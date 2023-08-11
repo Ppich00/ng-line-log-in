@@ -23,8 +23,6 @@ export class AppComponent {
     liff.init({liffId: '2000383540-BegEJ63g'}, () => {
       if (liff.isLoggedIn()) {
         this.runApp();
-      } else {
-        liff.login();
       }
     }, err => console.error(err));
   }
@@ -39,6 +37,10 @@ export class AppComponent {
       this.statusMessage = profile.statusMessage || '';
       this.userId = profile.userId;
     }).catch(err => console.error(err));
+  }
+
+  login() {
+    liff.login();
   }
 
   logout(): void {
