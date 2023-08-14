@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {LineLiffService} from "../../services/line-liff.service";
 
 @Component({
@@ -10,8 +10,11 @@ import {LineLiffService} from "../../services/line-liff.service";
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent {
-  liffService = inject(LineLiffService);
-  onLogin(){
+
+  constructor(private liffService: LineLiffService) {
+  }
+
+  onLogin() {
     console.log("login");
     this.liffService.loging()
 
