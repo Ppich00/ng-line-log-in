@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
   providedIn: 'root'
 })
 export class LineLiffService implements OnInit {
-  host = window.location.href;
+  host = window.location.host;
 
   constructor(private router: Router) {
     liff.init({liffId: "2000383540-BegEJ63g"})
